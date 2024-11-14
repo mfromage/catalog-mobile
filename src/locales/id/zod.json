@@ -1,0 +1,113 @@
+{
+  "errors": {
+    "invalid_type": "Diharapkan {{expected}}, tapi yang diterima {{received}}",
+    "invalid_type_received_undefined": "Harap isi kolom ini",
+    "invalid_type_received_null": "Harap isi kolom ini",
+    "invalid_literal": "Nilai literal tidak valid, yang diharapkan {{expected}}",
+    "unrecognized_keys": "Kunci tidak dikenali: {{- keys}}",
+    "invalid_union": "Input tidak valid",
+    "invalid_union_discriminator": "Nilai diskriminator tidak valid. Yang diharapkan {{- options}}",
+    "invalid_enum_value": "Nilai enum tidak valid. Yang diharapkan {{- options}}, yang diterima '{{received}}'",
+    "invalid_arguments": "Argumen fungsi tidak valid",
+    "invalid_return_type": "Tipe pengembalian fungsi tidak valid",
+    "invalid_date": "Tanggal tidak valid",
+    "custom": "Input tidak valid",
+    "invalid_intersection_types": "Hasil intersection tidak dapat digabungkan",
+    "not_multiple_of": "Angka harus merupakan kelipatan dari {{multipleOf}}",
+    "not_finite": "Angka harus terbatas",
+    "invalid_string": {
+      "email": "{{validation}} tidak valid",
+      "url": "{{validation}} tidak valid",
+      "uuid": "{{validation}} tidak valid",
+      "cuid": "{{validation}} tidak valid",
+      "regex": "Tidak valid",
+      "datetime": "{{validation}} tidak valid",
+      "startsWith": "Input tidak valid: harus dimulai dengan \"{{startsWith}}\"",
+      "endsWith": "Input tidak valid: harus diakhiri dengan \"{{endsWith}}\""
+    },
+    "too_small": {
+      "array": {
+        "exact": "Array harus berisi tepat {{minimum}} elemen",
+        "inclusive": "Array harus berisi setidaknya {{minimum}} elemen",
+        "not_inclusive": "Array harus berisi lebih dari {{minimum}} elemen"
+      },
+      "string": {
+        "exact": "Teks harus berisi tepat {{minimum}} karakter",
+        "inclusive": "Teks harus berisi setidaknya {{minimum}} karakter",
+        "not_inclusive": "Teks harus berisi lebih dari {{minimum}} karakter"
+      },
+      "number": {
+        "exact": "Angka harus tepat {{minimum}}",
+        "inclusive": "Angka harus lebih besar dari atau sama dengan {{minimum}}",
+        "not_inclusive": "Angka harus lebih besar dari {{minimum}}"
+      },
+      "set": {
+        "exact": "Input tidak valid",
+        "inclusive": "Input tidak valid",
+        "not_inclusive": "Input tidak valid"
+      },
+      "date": {
+        "exact": "Tanggal harus tepat {{- minimum, datetime}}",
+        "inclusive": "Tanggal harus lebih besar dari atau sama dengan {{- minimum, datetime}}",
+        "not_inclusive": "Tanggal harus lebih besar dari {{- minimum, datetime}}"
+      }
+    },
+    "too_big": {
+      "array": {
+        "exact": "Array harus berisi tepat {{maximum}} elemen",
+        "inclusive": "Array harus berisi paling banyak {{maximum}} elemen",
+        "not_inclusive": "Array harus berisi kurang dari {{maximum}} elemen"
+      },
+      "string": {
+        "exact": "Teks harus berisi tepat {{maximum}} karakter",
+        "inclusive": "Teks harus berisi paling banyak {{maximum}} karakter",
+        "not_inclusive": "Teks harus berisi kurang dari {{maximum}} karakter"
+      },
+      "number": {
+        "exact": "Angka harus tepat {{maximum}}",
+        "inclusive": "Angka harus lebih kecil dari atau sama dengan {{maximum}}",
+        "not_inclusive": "Angka harus lebih kecil dari {{maximum}}"
+      },
+      "set": {
+        "exact": "Input tidak valid",
+        "inclusive": "Input tidak valid",
+        "not_inclusive": "Input tidak valid"
+      },
+      "date": {
+        "exact": "Tanggal harus tepat {{- maximum, datetime}}",
+        "inclusive": "Tanggal harus lebih kecil dari atau sama dengan {{- maximum, datetime}}",
+        "not_inclusive": "Tanggal harus lebih kecil dari {{- maximum, datetime}}"
+      }
+    }
+  },
+  "validations": {
+    "email": "email",
+    "url": "url",
+    "uuid": "uuid",
+    "cuid": "cuid",
+    "regex": "regex",
+    "datetime": "datetime"
+  },
+  "types": {
+    "function": "fungsi",
+    "number": "angka",
+    "string": "teks",
+    "nan": "nan",
+    "integer": "integer",
+    "float": "float",
+    "boolean": "boolean",
+    "date": "tanggal",
+    "bigint": "bigint",
+    "undefined": "tidak terdefinisi",
+    "symbol": "simbol",
+    "null": "null",
+    "array": "array",
+    "object": "objek",
+    "unknown": "tidak diketahui",
+    "promise": "janji",
+    "void": "void",
+    "never": "never",
+    "map": "map",
+    "set": "set"
+  }
+}
