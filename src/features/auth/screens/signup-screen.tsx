@@ -1,4 +1,4 @@
-import { AuthScreenProps } from '@/common/types/auth-navigator.types';
+import { AuthScreenProps } from '@/types/auth-navigator.types';
 import { Text, View } from 'react-native';
 
 const SignUpScreen = ({}: AuthScreenProps) => {

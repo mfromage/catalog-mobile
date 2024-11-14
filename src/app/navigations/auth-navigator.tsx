@@ -1,7 +1,7 @@
 import {
   AuthScreenNames,
   AuthStackParamList,
-} from '@/common/types/auth-navigator.types';
+} from '@/types/auth-navigator.types';
 import SignInScreen from '@/features/auth/screens/signin-screen';
 import SignUpScreen from '@/features/auth/screens/signup-screen';
 import { createStackNavigator } from '@react-navigation/stack';
