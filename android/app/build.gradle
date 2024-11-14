@@ -143,6 +143,7 @@ android {
         jniLibs {
             useLegacyPackaging (findProperty('expo.useLegacyPackaging')?.toBoolean() ?: false)
         }
+        pickFirst '**/libc++_shared.so'
     }
 }
 
@@ -193,6 +194,8 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    implementation project(':watermelondb-jsi')
 }
 
 if (rnVersion < versionToNumber(0, 75, 0)) {

@@ -34,6 +34,7 @@ export default function (api) {
           verbose: false,
         },
       ],
+      ['@babel/plugin-proposal-decorators', { legacy: true }],
     ],
   };
 }
