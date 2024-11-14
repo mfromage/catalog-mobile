@@ -42,6 +42,23 @@
       <key>NSAllowsLocalNetworking</key>
       <true/>
     </dict>
+    <key>UIAppFonts</key>
+    <array>
+      <string>NunitoSans_200ExtraLight_Italic.ttf</string>
+      <string>NunitoSans_300Light_Italic.ttf</string>
+      <string>NunitoSans_400Regular_Italic.ttf</string>
+      <string>NunitoSans_600SemiBold_Italic.ttf</string>
+      <string>NunitoSans_700Bold_Italic.ttf</string>
+      <string>NunitoSans_800ExtraBold_Italic.ttf</string>
+      <string>NunitoSans_900Black_Italic.ttf</string>
+      <string>NunitoSans_200ExtraLight.ttf</string>
+      <string>NunitoSans_300Light.ttf</string>
+      <string>NunitoSans_400Regular.ttf</string>
+      <string>NunitoSans_600SemiBold.ttf</string>
+      <string>NunitoSans_700Bold.ttf</string>
+      <string>NunitoSans_800ExtraBold.ttf</string>
+      <string>NunitoSans_900Black.ttf</string>
+    </array>
     <key>UILaunchStoryboardName</key>
     <string>SplashScreen</string>
     <key>UIRequiredDeviceCapabilities</key>

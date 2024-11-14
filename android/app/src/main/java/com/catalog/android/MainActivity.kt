@@ -2,9 +2,11 @@ package com.catalog.android
 
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
+import com.facebook.react.common.assets.ReactFontManager
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
 
@@ -12,11 +14,13 @@ import expo.modules.ReactActivityDelegateWrapper
 
 class MainActivity : ReactActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
-    // Set the theme to AppTheme BEFORE onCreate to support
-    // coloring the background, status bar, and navigation bar.
-    // This is required for expo-splash-screen.
-    setTheme(R.style.AppTheme);
-    super.onCreate(null)
+      // Set the theme to AppTheme BEFORE onCreate to support
+      // coloring the background, status bar, and navigation bar.
+      // This is required for expo-splash-screen.
+      setTheme(R.style.AppTheme);
+      super.onCreate(null)
+
+      ReactFontManager.getInstance().addCustomFont(this, "NunitoSans", R.font.nunito_sans);
   }
 
   /**
