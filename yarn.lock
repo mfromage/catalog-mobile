@@ -1274,6 +1274,11 @@
   dependencies:
     levn "^0.4.1"
 
+"@expo-google-fonts/nunito-sans@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/nunito-sans/-/nunito-sans-0.2.3.tgz#491d915531a41aea2c93cdb3f53893c3a60af575"
+  integrity sha512-8p1ZVigs6rCArGzQtLeaJ70wZI7hc32IyLnPQC6Ul1HW8Ok6qn+Q5tCpPz3/0k+LcMU6dyAmNj5fVzDSTho9aA==
+
 "@expo/bunyan@^4.0.0":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.1.tgz#ab9e17e36c71c704a0ce72168378a487368da736"
@@ -4467,6 +4472,13 @@ expo-file-system@~17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-17.0.1.tgz#b9f8af8c1c06ec71d96fd7a0d2567fa9e1c88f15"
   integrity sha512-dYpnZJqTGj6HCYJyXAgpFkQWsiCH3HY1ek2cFZVHFoEc5tLz9gmdEgTF6nFHurvmvfmXqxi7a5CXyVm0aFYJBw==
+
+expo-font@^13.0.1:
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-13.0.1.tgz#3a7eed7a4238a352fc74a425fd8c020c5f122382"
+  integrity sha512-8JE47B+6cLeKWr5ql8gU6YsPHjhrz1vMrTqYMm72No/8iW8Sb/uL4Oc0dpmbjq3hLLXBY0xPBQOgU7FQ6Y04Vg==
+  dependencies:
+    fontfaceobserver "^2.1.0"
 
 expo-font@~12.0.10:
   version "12.0.10"

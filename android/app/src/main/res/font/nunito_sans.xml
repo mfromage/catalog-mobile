@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font app:fontStyle="normal" app:fontWeight="200" app:font="@font/nunitosans_200extralight" />
+    <font app:fontStyle="normal" app:fontWeight="300" app:font="@font/nunitosans_300light" />
+    <font app:fontStyle="normal" app:fontWeight="400" app:font="@font/nunitosans_400regular" />
+    <font app:fontStyle="normal" app:fontWeight="600" app:font="@font/nunitosans_600semibold" />
+    <font app:fontStyle="normal" app:fontWeight="700" app:font="@font/nunitosans_700bold" />
+    <font app:fontStyle="normal" app:fontWeight="800" app:font="@font/nunitosans_800extrabold" />
+    <font app:fontStyle="normal" app:fontWeight="900" app:font="@font/nunitosans_900black" />
+    <font app:fontStyle="italic" app:fontWeight="200" app:font="@font/nunitosans_200extralight_italic" />
+    <font app:fontStyle="italic" app:fontWeight="300" app:font="@font/nunitosans_300light_italic" />
+    <font app:fontStyle="italic" app:fontWeight="400" app:font="@font/nunitosans_400regular_italic" />
+    <font app:fontStyle="italic" app:fontWeight="600" app:font="@font/nunitosans_600semibold_italic" />
+    <font app:fontStyle="italic" app:fontWeight="700" app:font="@font/nunitosans_700bold_italic" />
+    <font app:fontStyle="italic" app:fontWeight="800" app:font="@font/nunitosans_800extrabold_italic" />
+    <font app:fontStyle="italic" app:fontWeight="900" app:font="@font/nunitosans_900black_italic" />
+</font-family>
