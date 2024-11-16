@@ -1,10 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import AppProviders from './app-providers';
 import '@/libs/i18n';
 import RootNavigator from './navigations/root-navigator';
-import HomeScreen from '@/features/home/screens/home-screen';
-
 export default function App() {
   return (
     <AppProviders>

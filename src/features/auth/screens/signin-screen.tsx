@@ -1,5 +1,5 @@
-import { AuthScreenNames, AuthScreenProps } from '@/types/auth-navigator.types';
 import { Button, Platform, Text, View } from 'react-native';
+import { AuthScreenNames, AuthScreenProps } from '@/types/auth-navigator.types';
 
 const SignInScreen = ({ navigation }: AuthScreenProps) => {
   const navigateToSignUp = () => navigation?.navigate(AuthScreenNames.signUp);

@@ -1,5 +1,5 @@
-import { render, fireEvent } from '@testing-library/react-native'; // Import the render and fireEvent methods
 import { NavigationContainer } from '@react-navigation/native';
+import { render, fireEvent } from '@testing-library/react-native'; // Import the render and fireEvent methods
 import AuthNavigator from '../auth-navigator';
 
 describe('AuthNavigator', () => {
