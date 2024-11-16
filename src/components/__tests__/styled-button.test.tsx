@@ -44,10 +44,20 @@ describe('StyledButton', () => {
   });
 
   it('renders text button', () => {
-    const { getByText } = setup({
-      variant: 'outlined',
+    const { element, getByText } = setup({
+      variant: 'text',
       color: 'primary',
     });
+    expect(element.props.style).toContainEqual(
+      expect.objectContaining({
+        backgroundColor: 'transparent',
+      }),
+    );
+    expect(element.props.style).toContainEqual(
+      expect.objectContaining({
+        borderColor: 'transparent',
+      }),
+    );
 
     const textElement = getByText(buttonText);
     expect(textElement.props.style).toContainEqual(
@@ -55,7 +65,7 @@ describe('StyledButton', () => {
     );
   });
 
-  it('call onPress', () => {
+  it('contained call onPress', () => {
     const onPress = jest.fn();
     const { element } = setup({ onPress });
 
@@ -63,9 +73,41 @@ describe('StyledButton', () => {
     expect(onPress).toHaveBeenCalled();
   });
 
-  it('onPress is not called on disabled', () => {
+  it('outlined call onPress', () => {
+    const onPress = jest.fn();
+    const { element } = setup({ onPress, variant: 'outlined' });
+
+    fireEvent.press(element);
+    expect(onPress).toHaveBeenCalled();
+  });
+
+  it('text call onPress', () => {
+    const onPress = jest.fn();
+    const { element } = setup({ onPress, variant: 'text' });
+
+    fireEvent.press(element);
+    expect(onPress).toHaveBeenCalled();
+  });
+
+  it('contained onPress is not called on disabled', () => {
     const onPress = jest.fn();
     const { element } = setup({ onPress, disabled: true });
+
+    fireEvent.press(element);
+    expect(onPress).not.toHaveBeenCalled();
+  });
+
+  it('outlined onPress is not called on disabled', () => {
+    const onPress = jest.fn();
+    const { element } = setup({ onPress, disabled: true, variant: 'outlined' });
+
+    fireEvent.press(element);
+    expect(onPress).not.toHaveBeenCalled();
+  });
+
+  it('text onPress is not called on disabled', () => {
+    const onPress = jest.fn();
+    const { element } = setup({ onPress, disabled: true, variant: 'text' });
 
     fireEvent.press(element);
     expect(onPress).not.toHaveBeenCalled();
