@@ -1,6 +1,6 @@
 import React from 'react';
 import StyledText from '../styled-text';
-import { mockPalette, render } from '@/testing/test-util';
+import { mockLightPalette, render } from '@/testing/test-util';
 import { normalizeFontSize } from '@/utils/font-size';
 
 describe('StyledText', () => {
@@ -25,7 +25,7 @@ describe('StyledText', () => {
   it('applies the correct color', () => {
     const { element } = setup({ color: 'primary' });
     expect(element.props.style).toContainEqual(
-      expect.objectContaining({ color: mockPalette.primary.main }),
+      expect.objectContaining({ color: mockLightPalette.primary.main }),
     );
   });
 
