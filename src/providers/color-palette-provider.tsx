@@ -2,9 +2,7 @@ import React, {
   createContext,
   useContext,
   useState,
-  ReactNode,
   useEffect,
-  FC,
   PropsWithChildren,
 } from 'react';
 import { useColorScheme } from 'react-native';

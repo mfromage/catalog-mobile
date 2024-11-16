@@ -1,7 +1,6 @@
-import { AuthScreenProps } from '@/types/auth-navigator.types';
 import { Text, View } from 'react-native';
 
-const SignUpScreen = ({}: AuthScreenProps) => {
+const SignUpScreen = () => {
   return (
     <View>
       <Text>Sign Up Screen</Text>

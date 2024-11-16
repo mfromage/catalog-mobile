@@ -1,4 +1,4 @@
-import { Platform, StyleSheet, Text, TextProps } from 'react-native';
+import { StyleSheet, Text, TextProps } from 'react-native';
 import { useColorPalette } from '@/providers/color-palette-provider';
 import {
   typographyStyles,
