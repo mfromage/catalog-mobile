@@ -6,15 +6,6 @@ const SignInScreen = ({ navigation }: AuthScreenProps) => {
   return (
     <View style={{ width: '100%', flex: 1 }}>
       <Text style={{ fontFamily: 'NunitoSans' }}>Sign In Screen</Text>
-      <Text
-        style={{
-          fontFamily:
-            Platform.OS === 'ios' ? 'NunitoSans-Italic' : 'NunitoSans',
-          fontStyle: 'italic',
-        }}>
-        Sign In Screen
-      </Text>
-
       <Button title="Sign Up" onPress={navigateToSignUp} />
     </View>
   );
