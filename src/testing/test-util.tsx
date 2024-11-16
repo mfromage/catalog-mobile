@@ -3,7 +3,7 @@ import { PropsWithChildren, ReactElement } from 'react';
 import { ColorPaletteProvider } from '@/providers/color-palette-provider';
 import { ColorPalette, lightPalette } from '@/themes';
 
-export const mockPalette: ColorPalette = {
+export const mockLightPalette: ColorPalette = {
   ...lightPalette,
   primary: {
     light: '#123456',
@@ -11,9 +11,19 @@ export const mockPalette: ColorPalette = {
     dark: '#123456',
   },
 };
+
+export const mockDarkPalette: ColorPalette = {
+  ...lightPalette,
+  primary: {
+    light: '#654321',
+    main: '#654321',
+    dark: '#654321',
+  },
+};
+
 const MockProviders = ({ children }: PropsWithChildren) => {
   return (
-    <ColorPaletteProvider initialPalette={mockPalette}>
+    <ColorPaletteProvider dark={mockDarkPalette} light={mockLightPalette}>
       {children}
     </ColorPaletteProvider>
   );

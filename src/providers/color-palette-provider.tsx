@@ -25,21 +25,22 @@ export const useColorPalette = () => {
 };
 
 type ColorPaletteProviderProps = {
-  initialPalette?: ColorPalette;
+  light?: ColorPalette;
+  dark?: ColorPalette;
 } & PropsWithChildren;
 
 export const ColorPaletteProvider = ({
-  initialPalette,
+  light = lightPalette,
+  dark = darkPalette,
   children,
 }: ColorPaletteProviderProps) => {
   const scheme = useColorScheme();
-
   const [palette, setPalette] = useState<ColorPalette>(
-    (initialPalette ?? scheme === 'dark') ? darkPalette : lightPalette,
+    scheme === 'dark' ? dark : light,
   );
 
   useEffect(() => {
-    setPalette(scheme === 'dark' ? darkPalette : lightPalette);
+    setPalette(scheme === 'dark' ? dark : light);
   }, [scheme]);
 
   return (
