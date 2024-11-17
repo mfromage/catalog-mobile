@@ -10,7 +10,7 @@ const AuthStack = createStackNavigator<AuthStackParamList>();
 
 const AuthNavigator = () => {
   return (
-    <AuthStack.Navigator>
+    <AuthStack.Navigator screenOptions={{ headerShown: false }}>
       <AuthStack.Screen
         name={AuthScreenNames.signIn}
         component={SignInScreen}
