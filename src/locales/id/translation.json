@@ -1,14 +1,23 @@
 {
-  "form": {
-    "email-address": "Alamat email",
-    "password": "Kata sandi"
-  },
-  "signin": {
+  "common": {
     "welcome": "Selamat datang",
     "signin": "Masuk",
-    "signup": "Daftar",
+    "signup": "Daftar"
+  },
+  "form": {
+    "name": "Nama",
+    "email-address": "Alamat email",
+    "password": "Kata sandi",
+    "password-confirm": "Konfirmasi kata sandi"
+  },
+  "signin": {
     "forgot-password": "Lupa kata sandi?",
     "signin-with-google": "Masuk dengan Google",
-    "new-user": "Pengguna baru?"
+    "new-user": "Pengguna baru?",
+    "confirm-password-not-match": "Kata sandi dan konfirmasi kata sandi tidak cocok"
+  },
+  "signup": {
+    "already-have-account": "Sudah punya akun?",
+    "signup-with-google": "Daftar dengan Google"
   }
 }

@@ -68,7 +68,7 @@ const SignInForm = ({
         disabled={disabled}
         testID={SignInFormTestId.signIn}
         onPress={methods.handleSubmit(onSubmit)}>
-        {t('signin.signin')}
+        {t('common.signin')}
       </StyledButton>
     </FormProvider>
   );

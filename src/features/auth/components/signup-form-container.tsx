@@ -1,45 +1,40 @@
 import { View, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import SignInForm from './signin-form';
+import SignUpForm from './signup-form';
 import { StyledButton } from '@/components/button/styled-button';
 import { dimensions } from '@/themes';
 import StyledText from '@/components/styled-text';
-import { SignInRequest } from '../types/auth.types';
+import { SignUpRequest } from '../types/auth.types';
 
-type SignInFormContainerProps = {
-  onSignUpPress: () => void;
-  onForgotPasswordPress: () => void;
+type SignUpFormContainerProps = {
+  onSignInPress: () => void;
 };
-
-const SignInFormContainer = ({
-  onSignUpPress,
-  onForgotPasswordPress,
-}: SignInFormContainerProps) => {
+const SignUpFormContainer = ({ onSignInPress }: SignUpFormContainerProps) => {
   const { t } = useTranslation();
-  const handleSubmit = (data: SignInRequest) => {
-    //todo: implement signin
+  const handleSubmit = (data: SignUpRequest) => {
+    //todo: implement SignUp
   };
   return (
     <View style={styles.container}>
       <StyledText variant="h1" style={styles.title}>
         {t('common.welcome')}
       </StyledText>
-      <SignInForm onSubmit={handleSubmit} {...{ onForgotPasswordPress }} />
+      <SignUpForm onSubmit={handleSubmit} />
       <StyledButton
         color="secondary"
-        testID={SignInFormContainerTestId.signInWithGoogle}>
-        {t('signin.signin-with-google')}
+        testID={SignUpFormContainerTestId.SignUpWithGoogle}>
+        {t('signup.signup-with-google')}
       </StyledButton>
       <View style={styles.signUpWrapper}>
         <StyledText variant="body2" style={styles.textSignUp}>
-          {t('signin.new-user')}
+          {t('signup.already-have-account')}
         </StyledText>
         <StyledButton
           variant="text"
           textProps={{ variant: 'body2', semiBold: true, underline: true }}
-          onPress={onSignUpPress}
-          testID={SignInFormContainerTestId.signUp}>
-          {t('common.signup')}
+          onPress={onSignInPress}
+          testID={SignUpFormContainerTestId.signIn}>
+          {t('common.signin')}
         </StyledButton>
       </View>
     </View>
@@ -51,8 +46,7 @@ const styles = StyleSheet.create({
     gap: dimensions.spacing.sm,
   },
   title: {
-    marginTop: dimensions.spacing.xxl,
-    marginBottom: dimensions.spacing.lg,
+    marginVertical: dimensions.spacing.lg,
   },
   signUpWrapper: {
     flexDirection: 'row',
@@ -63,9 +57,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export const SignInFormContainerTestId = {
-  signInWithGoogle: 'SignInFormContainer_signInWithGoogle',
-  signUp: 'SignInFormContainer_signUp',
+export const SignUpFormContainerTestId = {
+  SignUpWithGoogle: 'SignUpFormContainer_SignUpWithGoogle',
+  signUp: 'SignUpFormContainer_signUp',
+  signIn: 'SignUpFormContainer_signIn',
 };
 
-export default SignInFormContainer;
+export default SignUpFormContainer;
