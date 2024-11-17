@@ -1,14 +1,23 @@
 {
-  "form": {
-    "email-address": "Email address",
-    "password": "Password"
-  },
-  "signin": {
+  "common": {
     "welcome": "Welcome",
     "signin": "Sign In",
-    "signup": "Sign Up",
+    "signup": "Sign Up"
+  },
+  "form": {
+    "name": "Name",
+    "email-address": "Email address",
+    "password": "Password",
+    "password-confirm": "Confirm Password"
+  },
+  "signin": {
     "forgot-password": "Forgot Password?",
     "signin-with-google": "Sign in with Google",
-    "new-user": "New user?"
+    "new-user": "New user?",
+    "confirm-password-not-match": "Password and confirm password do not match"
+  },
+  "signup": {
+    "already-have-account": "Already have an account?",
+    "signup-with-google": "Sign up with Google"
   }
 }

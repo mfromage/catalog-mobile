@@ -1,10 +1,16 @@
-import { Text, View } from 'react-native';
+import ScreenView from '@/components/screen-view';
+import SignUpFormContainer from '../components/signup-form-container';
+import { AuthScreenNames, AuthScreenProps } from '@/types/auth-navigator.types';
 
-const SignUpScreen = () => {
+const SignUpScreen = ({ navigation }: AuthScreenProps) => {
+  const navigateToSignIn = () =>
+    navigation?.canGoBack()
+      ? navigation?.goBack()
+      : navigation?.navigate(AuthScreenNames.signIn);
   return (
-    <View>
-      <Text>Sign Up Screen</Text>
-    </View>
+    <ScreenView>
+      <SignUpFormContainer onSignInPress={navigateToSignIn} />
+    </ScreenView>
   );
 };
 
