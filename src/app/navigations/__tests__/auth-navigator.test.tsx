@@ -1,23 +1,23 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { render, fireEvent } from '@testing-library/react-native'; // Import the render and fireEvent methods
+import { render, fireEvent } from '@/testing/test-util';
 import AuthNavigator from '../auth-navigator';
+import { SignInFormTestId } from '@/features/auth/components/signin-form';
+import { SignInFormContainerTestId } from '@/features/auth/components/signin-form-container';
+import { SignUpFormTestId } from '@/features/auth/components/signup-form';
 
 describe('AuthNavigator', () => {
   it('should navigate from SignIn to SignUp', async () => {
-    const { getByText } = render(
+    const { getByTestId } = render(
       <NavigationContainer>
         <AuthNavigator />
       </NavigationContainer>,
     );
 
-    // Initially, we should see the SignInScreen
-    expect(getByText('Sign In Screen')).toBeTruthy(); // Assuming "Sign In" is a text on SignInScreen
+    expect(getByTestId(SignInFormTestId.signIn)).toBeTruthy();
 
-    // Simulate a navigation action (button press or link click) that navigates to SignUp screen
-    const navigateButton = getByText('Sign Up'); // Assuming this button exists in SignInScreen
+    const navigateButton = getByTestId(SignInFormContainerTestId.signUp);
     fireEvent.press(navigateButton);
 
-    // After pressing the button, we should be on the SignUpScreen
-    expect(getByText('Sign Up Screen')).toBeTruthy(); // Assuming "Sign Up" is a text on SignUpScreen
+    expect(getByTestId(SignUpFormTestId.signUp)).toBeTruthy();
   });
 });
