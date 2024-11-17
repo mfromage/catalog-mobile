@@ -1,3 +1,14 @@
 {
-  "welcome": "Selamat datang"
+  "form": {
+    "email-address": "Alamat email",
+    "password": "Kata sandi"
+  },
+  "signin": {
+    "welcome": "Selamat datang",
+    "signin": "Masuk",
+    "signup": "Daftar",
+    "forgot-password": "Lupa kata sandi?",
+    "signin-with-google": "Masuk dengan Google",
+    "new-user": "Pengguna baru?"
+  }
 }
