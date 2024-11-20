@@ -57,7 +57,38 @@ export type BaseColor = Pick<ColorPalette, BaseColorKey>;
 
 export const lightPalette = basePalette;
 
-//todo: update dark color
 export const darkPalette: ColorPalette = {
   ...basePalette,
+  primary: {
+    light: '#7B93D9',
+    main: '#4C6BC0',
+    dark: '#354C8C',
+  },
+  secondary: {
+    light: '#3A3A3D',
+    main: '#2C2C2F',
+    dark: '#1E1E20',
+  },
+  black: {
+    light: '#CCCCCC',
+    main: '#FFFFFF',
+    dark: '#FFFFFF',
+  },
+  white: {
+    light: '#333333',
+    main: '#1A1A1A',
+    dark: '#000000',
+  },
+  input: {
+    background: '#2C2C2F',
+    placeholder: '#666666',
+  },
+  tab: {
+    default: '#666666',
+    selected: '#4C6BC0',
+  },
+  disabled: '#555555',
+  background: '#1A1A1A',
+  backgroundSecondary: '#2C2C2F',
+  backgroundHeader: '#354C8C',
 };
