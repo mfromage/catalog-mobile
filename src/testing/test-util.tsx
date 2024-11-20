@@ -2,6 +2,7 @@ import { render } from '@testing-library/react-native';
 import { PropsWithChildren, ReactElement } from 'react';
 import { ColorPaletteProvider } from '@/providers/color-palette-provider';
 import { ColorPalette, lightPalette } from '@/themes';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export const mockLightPalette: ColorPalette = {
   ...lightPalette,
@@ -22,10 +23,13 @@ export const mockDarkPalette: ColorPalette = {
 };
 
 const MockProviders = ({ children }: PropsWithChildren) => {
+  const queryClient = new QueryClient();
   return (
-    <ColorPaletteProvider dark={mockDarkPalette} light={mockLightPalette}>
+    <QueryClientProvider client={queryClient}>
+      <ColorPaletteProvider dark={mockDarkPalette} light={mockLightPalette}>
       {children}
     </ColorPaletteProvider>
+    </QueryClientProvider>
   );
 };
 

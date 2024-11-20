@@ -8,6 +8,6 @@ export default {
     '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(jest-)?react-native|@react-native|@react-navigation|expo-status-bar)',
+    'node_modules/(?!(jest-)?react-native|@react-native|@react-navigation|expo-*)',
   ],
 };

@@ -1,5 +1,7 @@
 import { API_BASE_URL } from '@env';
 
+const baseUrl = API_BASE_URL;
+
 export const AppConfig = {
-  apiBaseUrl: API_BASE_URL || 'http://localhost:8080',
+  apiBaseUrl: baseUrl ?? 'http://localhost:8080',
 };
