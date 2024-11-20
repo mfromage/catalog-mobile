@@ -5,11 +5,13 @@ import React, {
   useEffect,
   PropsWithChildren,
 } from 'react';
-import { useColorScheme } from 'react-native';
+import { ColorSchemeName, useColorScheme } from 'react-native';
 import { ColorPalette, darkPalette, lightPalette } from '@/themes';
 
 interface ColorPaletteContextType {
   palette: ColorPalette;
+  currentScheme: ColorSchemeName;
+  togglePalette: () => void;
 }
 
 const ColorPaletteContext = createContext<ColorPaletteContextType | undefined>(
@@ -19,7 +21,7 @@ const ColorPaletteContext = createContext<ColorPaletteContextType | undefined>(
 export const useColorPalette = () => {
   const context = useContext(ColorPaletteContext);
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error('useColorPalette must be used within a ColorPaletteProvider');
   }
   return context;
 };
@@ -35,16 +37,23 @@ export const ColorPaletteProvider = ({
   children,
 }: ColorPaletteProviderProps) => {
   const scheme = useColorScheme();
+  const [currentScheme, setCurrentScheme] = useState<ColorSchemeName>(scheme);
   const [palette, setPalette] = useState<ColorPalette>(
     scheme === 'dark' ? dark : light,
   );
 
+  const togglePalette = () => {
+    setPalette(palette === light ? dark : light);
+    setCurrentScheme(currentScheme === 'dark' ? 'light' : 'dark');
+  };
+
   useEffect(() => {
     setPalette(scheme === 'dark' ? dark : light);
+    setCurrentScheme(scheme);
   }, [scheme]);
 
   return (
-    <ColorPaletteContext.Provider value={{ palette }}>
+    <ColorPaletteContext.Provider value={{ palette, currentScheme, togglePalette }}>
       {children}
     </ColorPaletteContext.Provider>
   );
