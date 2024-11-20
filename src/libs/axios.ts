@@ -1,6 +1,12 @@
 import axios, { AxiosError } from 'axios';
 import { AppConfig } from '@/app/app-config';
 
+import { ErrorResponse } from '@/types/api.types';
+import {
+  clearUserCredential,
+  getStoredAccessToken,
+} from '@/services/user-service';
+
 const api = axios.create({
   baseURL: AppConfig.apiBaseUrl,
   headers: {
@@ -10,14 +16,20 @@ const api = axios.create({
 
 api.interceptors.request.use(
   async config => {
-    //todo: add access token to request header
-    // config.headers.Authorization = `Bearer ${accessToken}`;
+    const accessToken = await getStoredAccessToken();
+    if (accessToken) {
+      config.headers.Authorization = `Bearer ${accessToken}`;
+    }
     return config;
   },
   error => {
     return Promise.reject(error);
   },
 );
+
+const mapErrorResponse = (error: AxiosError): ErrorResponse => ({
+  message: (error.response?.data as ErrorResponse).message || error.message,
+});
 
 api.interceptors.response.use(
   response => {
@@ -27,10 +39,9 @@ api.interceptors.response.use(
     // Handle errors globally
     if (error.response) {
       if (error.response.status === 401) {
-        //todo: handle unauthorized error
+        clearUserCredential();
       }
-      //todo: transform error response
-      return Promise.reject(error);
+      return Promise.reject(mapErrorResponse(error));
     }
 
     return Promise.reject(error);
