@@ -3,11 +3,14 @@ import { SafeAreaView, StyleSheet } from 'react-native';
 import AppProviders from './app-providers';
 import '@/libs/i18n';
 import RootNavigator from './navigations/root-navigator';
+import AppInitialization from './app-initialization';
 export default function App() {
   return (
     <AppProviders>
       <SafeAreaView style={styles.container}>
-        <RootNavigator />
+        <AppInitialization>
+          <RootNavigator />
+        </AppInitialization>
       </SafeAreaView>
       <StatusBar style="auto" />
     </AppProviders>
