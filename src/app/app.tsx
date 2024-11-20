@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet } from 'react-native';
 import AppInitialization from './app-initialization';
 import AppProviders from './app-providers';
 import '@/libs/i18n';
-import RootNavigator from './navigations/root-navigator';
+import RootNavigator from '@/navigations/root-navigator';
 
 export default function App() {
   return (
