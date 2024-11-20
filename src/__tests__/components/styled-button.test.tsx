@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledButton } from '../button/styled-button';
+import { StyledButton } from '@/components/button/styled-button';
 import { fireEvent, mockLightPalette, render } from '@/testing/test-util';
 
 const testId = 'button-1';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { View } from 'react-native';
-import StyledTextInput from '../styled-text-input';
+import StyledTextInput from '@/components/styled-text-input';
 import { fireEvent, render } from '@/testing/test-util';
 
 const setup = (props = {}) => {

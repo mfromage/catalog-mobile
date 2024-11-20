@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledText from '../styled-text';
+import StyledText from '@/components/styled-text';
 import { mockLightPalette, render } from '@/testing/test-util';
 import { normalizeFontSize } from '@/utils/font-size';
 
