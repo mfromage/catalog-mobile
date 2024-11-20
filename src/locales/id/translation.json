@@ -2,7 +2,8 @@
   "common": {
     "welcome": "Selamat datang",
     "signin": "Masuk",
-    "signup": "Daftar"
+    "signup": "Daftar",
+    "loading": "Memuat"
   },
   "form": {
     "name": "Nama",

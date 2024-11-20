@@ -2,7 +2,8 @@
   "common": {
     "welcome": "Welcome",
     "signin": "Sign In",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+    "loading": "Loading"
   },
   "form": {
     "name": "Name",
