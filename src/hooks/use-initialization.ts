@@ -1,6 +1,6 @@
+import { useEffect, useState } from 'react';
 import { getStoredUser } from '@/services/user-service';
 import useAuthStore from '@/stores/auth-store';
-import { useEffect, useState } from 'react';
 
 const useInitialization = () => {
   const [hasInitialized, setInitialized] = useState(false);
@@ -9,11 +9,10 @@ const useInitialization = () => {
   useEffect(() => {
     const initialSetUser = async () => {
       const user = await getStoredUser();
-      user && setUser(user);
-    };
-    initialSetUser().then(() => {
+      if (user) setUser(user);
       setInitialized(true);
-    });
+    };
+    initialSetUser();
   }, []);
 
   return { hasInitialized };

@@ -1,7 +1,6 @@
 import React from 'react';
-import { fireEvent, mockLightPalette, render } from '@/testing/test-util';
 import { StyledButton } from '../button/styled-button';
-import { useColorPalette } from '@/providers/color-palette-provider';
+import { fireEvent, mockLightPalette, render } from '@/testing/test-util';
 
 const testId = 'button-1';
 const buttonText = 'Button 1';

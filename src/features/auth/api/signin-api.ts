@@ -1,6 +1,6 @@
-import { User } from '@/types/user.types';
 import { SignInRequest } from '../types/auth.types';
 import api from '@/libs/axios';
+import { User } from '@/types/user.types';
 
 export type SignInResponse = {
   access_token: string;

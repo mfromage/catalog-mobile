@@ -1,9 +1,9 @@
-import ScreenView from '@/components/screen-view';
-import StyledText from '@/components/styled-text';
-import useInitialization from '@/hooks/use-initialization';
 import { memo, PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, View } from 'react-native';
+import ScreenView from '@/components/screen-view';
+import StyledText from '@/components/styled-text';
+import useInitialization from '@/hooks/use-initialization';
 
 const AppInitialization = ({ children }: PropsWithChildren) => {
   const { hasInitialized } = useInitialization();

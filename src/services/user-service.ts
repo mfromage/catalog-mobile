@@ -1,6 +1,6 @@
+import * as SecureStore from 'expo-secure-store';
 import useAuthStore from '@/stores/auth-store';
 import { User } from '@/types/user.types';
-import * as SecureStore from 'expo-secure-store';
 
 const userKey = 'default-user';
 const accessTokenKey = 'default-access-token';

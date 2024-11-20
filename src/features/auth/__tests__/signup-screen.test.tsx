@@ -1,7 +1,7 @@
-import { render } from '@/testing/test-util';
 import React from 'react';
-import SignUpScreen from '../screens/signup-screen';
 import { SignUpFormTestId } from '../components/signup-form';
+import SignUpScreen from '../screens/signup-screen';
+import { render } from '@/testing/test-util';
 
 describe('SignUpScreen', () => {
   it('should render correctly', () => {

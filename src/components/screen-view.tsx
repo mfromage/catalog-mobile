@@ -1,7 +1,7 @@
-import { useColorPalette } from '@/providers/color-palette-provider';
-import { dimensions } from '@/themes';
 import { PropsWithChildren } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { useColorPalette } from '@/providers/color-palette-provider';
+import { dimensions } from '@/themes';
 
 const ScreenView = ({ children }: PropsWithChildren) => {
   const { palette } = useColorPalette();
