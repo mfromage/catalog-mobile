@@ -46,7 +46,7 @@ describe('Auth Types', () => {
         name: 'John Doe',
         email: 'test@example.com',
         password: 'password123',
-        passwordConfirmation: 'password123',
+        password_confirmation: 'password123',
       };
 
       const result = SignUpFormSchema.safeParse(validData);
@@ -58,7 +58,7 @@ describe('Auth Types', () => {
         name: 'Jo',
         email: 'test@example.com',
         password: 'password123',
-        passwordConfirmation: 'password123',
+        password_confirmation: 'password123',
       };
 
       const result = SignUpFormSchema.safeParse(invalidData);

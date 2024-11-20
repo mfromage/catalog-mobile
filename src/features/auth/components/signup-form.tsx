@@ -50,7 +50,7 @@ const SignUpForm = ({
         testID={SignUpFormTestId.password}
       />
       <StyledTextInput
-        name="passwordConfirmation"
+        name="password_confirmation"
         label={t('form.password-confirm')}
         placeholder={t('form.password-confirm')}
         secureTextEntry

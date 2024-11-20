@@ -1,12 +1,12 @@
 import { useMutation } from '@tanstack/react-query';
-import { postUserSignIn } from '../api/signin-api';
-import { AuthResponse, SignInRequest } from '../types/auth.types';
+import { postUserSignUp } from '../api/signup-api';
+import { AuthResponse, SignUpRequest } from '../types/auth.types';
 import { storeUserCredential } from '@/services/user-service';
 import { ErrorResponse } from '@/types/api.types';
 
-export const useSignIn = () => {
-  const mutation = useMutation<AuthResponse, ErrorResponse, SignInRequest>({
-    mutationFn: postUserSignIn,
+export const useSignUp = () => {
+  const mutation = useMutation<AuthResponse, ErrorResponse, SignUpRequest>({
+    mutationFn: postUserSignUp,
     onSuccess: async ({ user, access_token }) => {
       await storeUserCredential(user, access_token);
     },
@@ -14,4 +14,4 @@ export const useSignIn = () => {
   return mutation;
 };
 
-export default useSignIn;
+export default useSignUp;
