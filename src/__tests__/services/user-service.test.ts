@@ -1,6 +1,6 @@
 import * as SecureStore from 'expo-secure-store';
-import useAuthStore from '@/stores/auth-store';
 import { storeUserCredential, getStoredUser, getStoredAccessToken, clearUserCredential } from '@/services/user-service';
+import useAuthStore from '@/stores/auth-store';
 
 // Mock dependencies
 jest.mock('expo-secure-store');

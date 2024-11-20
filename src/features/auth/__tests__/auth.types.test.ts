@@ -1,5 +1,5 @@
 import { SignInFormSchema, SignUpFormSchema } from '../types/auth.types';
-import i18n from '@/libs/i18n';
+import '@/libs/i18n';
 
 describe('Auth Types', () => {
   describe('SignInFormSchema', () => {

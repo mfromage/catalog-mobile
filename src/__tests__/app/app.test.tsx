@@ -24,6 +24,6 @@ jest.mock('@/navigations/root-navigator', () => 'RootNavigator');
 
 describe('App', () => {
   it('renders correctly', () => {
-    const { getByTestId } = render(<App />);
+    render(<App />);
   });
 });

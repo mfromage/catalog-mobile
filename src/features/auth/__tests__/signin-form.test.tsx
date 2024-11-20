@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, fireEvent, screen, waitFor } from '@/testing/test-util';
 import SignInForm, { SignInFormTestId } from '../components/signin-form';
 import { SignInRequest } from '../types/auth.types';
+import { render, fireEvent, screen, waitFor } from '@/testing/test-util';
 
 describe('SignInForm', () => {
   const mockOnSubmit = jest.fn();

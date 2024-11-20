@@ -1,8 +1,8 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, renderHook } from '@testing-library/react-native';
 import { PropsWithChildren, ReactElement } from 'react';
 import { ColorPaletteProvider } from '@/providers/color-palette-provider';
 import { ColorPalette, lightPalette } from '@/themes';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export const mockLightPalette: ColorPalette = {
   ...lightPalette,
@@ -27,8 +27,8 @@ const MockProviders = ({ children }: PropsWithChildren) => {
   return (
     <QueryClientProvider client={queryClient}>
       <ColorPaletteProvider dark={mockDarkPalette} light={mockLightPalette}>
-      {children}
-    </ColorPaletteProvider>
+        {children}
+      </ColorPaletteProvider>
     </QueryClientProvider>
   );
 };
@@ -39,7 +39,7 @@ const customRender = (ui: ReactElement, options = {}) =>
     ...options,
   });
 
-  const customRenderHook = (callback: (props: any) => any, options = {}) =>
+const customRenderHook = <T, U>(callback: (props: U) => T, options = {}) =>
   renderHook(callback, {
     wrapper: ({ children }) => <MockProviders>{children}</MockProviders>,
     ...options,
