@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { View, StyleSheet } from 'react-native';
 import SignUpForm from './signup-form';
+import useSignUp from '../hooks/use-signup';
 import { StyledButton } from '@/components/button/styled-button';
 import StyledText from '@/components/styled-text';
 import GoogleIcon from '@/components/svg/google-icon';
@@ -11,15 +12,13 @@ type SignUpFormContainerProps = {
 };
 const SignUpFormContainer = ({ onSignInPress }: SignUpFormContainerProps) => {
   const { t } = useTranslation();
-  const handleSubmit = () => {
-    //todo: implement SignUp
-  };
+  const { mutate: signUp, error, isPending } = useSignUp();
   return (
     <View style={styles.container}>
       <StyledText variant="h1" style={styles.title}>
         {t('common.welcome')}
       </StyledText>
-      <SignUpForm onSubmit={handleSubmit} />
+      <SignUpForm onSubmit={signUp} disabled={isPending} errorMessage={error?.message} />
       <StyledButton
         left={<GoogleIcon />}
         color="secondary"
