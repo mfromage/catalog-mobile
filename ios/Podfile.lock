@@ -1203,7 +1203,7 @@ PODS:
     - React-logger (= 0.74.5)
     - React-perflogger (= 0.74.5)
     - React-utils (= 0.74.5)
-  - RNGestureHandler (2.20.2):
+  - RNGestureHandler (2.21.2):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1311,7 +1311,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (4.1.0):
+  - RNScreens (4.2.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1333,6 +1333,8 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - RNSVG (15.9.0):
+    - React-Core
   - RNVectorIcons (10.2.0):
     - DoubleConversion
     - glog
@@ -1429,6 +1431,7 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - "simdjson (from `../node_modules/@nozbe/simdjson`)"
   - "WatermelonDB (from `../node_modules/@nozbe/watermelondb`)"
@@ -1570,6 +1573,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   simdjson:
@@ -1642,9 +1647,10 @@ SPEC CHECKSUMS:
   React-runtimescheduler: cfbe85c3510c541ec6dc815c7729b41304b67961
   React-utils: f242eb7e7889419d979ca0e1c02ccc0ea6e43b29
   ReactCommon: f7da14a8827b72704169a48c929bcde802698361
-  RNGestureHandler: a8e61b93b4c5c44e6cd797cdaba43126ec36acaa
+  RNGestureHandler: 6fee3422fd8c81c5ee756fa72e3d1780e9943d9d
   RNReanimated: af4e059a8fd0fb7a9cdf5ad35ead4699598a9447
-  RNScreens: 48bc9eba07f93971071a5268b4fe5fcb784a5ef8
+  RNScreens: 77fa8714b82a11df2cb236aef97fc4790e0b782b
+  RNSVG: 3d2bdcaef51c8071880a9c0072fe324f4423a3ba
   RNVectorIcons: 845eda5c7819bd29699cafd0fc98c9d4afe28c96
   simdjson: e6bfae9ce4bcdc80452d388d593816f1ca2106f3
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d

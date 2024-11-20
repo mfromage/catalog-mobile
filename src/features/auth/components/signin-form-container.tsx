@@ -5,6 +5,7 @@ import { StyledButton } from '@/components/button/styled-button';
 import { dimensions } from '@/themes';
 import StyledText from '@/components/styled-text';
 import { SignInRequest } from '../types/auth.types';
+import GoogleIcon from '@/components/svg/google-icon';
 
 type SignInFormContainerProps = {
   onSignUpPress: () => void;
@@ -26,6 +27,7 @@ const SignInFormContainer = ({
       </StyledText>
       <SignInForm onSubmit={handleSubmit} {...{ onForgotPasswordPress }} />
       <StyledButton
+        left={<GoogleIcon />}
         color="secondary"
         testID={SignInFormContainerTestId.signInWithGoogle}>
         {t('signin.signin-with-google')}
