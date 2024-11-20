@@ -1,5 +1,5 @@
-import { z } from '@/libs/zod';
 import i18n from '@/libs/i18n';
+import { z } from '@/libs/zod';
 export const SignInFormSchema = z.object({
   email: z.string().email(),
   password: z.string().min(6).min(1),

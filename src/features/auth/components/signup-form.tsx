@@ -1,10 +1,10 @@
-import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { SignUpFormSchema, SignUpRequest } from '../types/auth.types';
-import StyledTextInput from '@/components/styled-text-input';
+import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
+import { SignUpFormSchema, SignUpRequest } from '../types/auth.types';
 import { StyledButton } from '@/components/button/styled-button';
 import StyledText from '@/components/styled-text';
+import StyledTextInput from '@/components/styled-text-input';
 
 type SignUpFormProps = {
   onSubmit: (data: SignUpRequest) => void;

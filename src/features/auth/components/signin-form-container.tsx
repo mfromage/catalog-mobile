@@ -1,12 +1,11 @@
-import { View, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
+import { View, StyleSheet } from 'react-native';
 import SignInForm from './signin-form';
-import { StyledButton } from '@/components/button/styled-button';
-import { dimensions } from '@/themes';
-import StyledText from '@/components/styled-text';
-import { SignInRequest } from '../types/auth.types';
-import GoogleIcon from '@/components/svg/google-icon';
 import useSignIn from '../hooks/use-signin';
+import { StyledButton } from '@/components/button/styled-button';
+import StyledText from '@/components/styled-text';
+import GoogleIcon from '@/components/svg/google-icon';
+import { dimensions } from '@/themes';
 
 type SignInFormContainerProps = {
   onSignUpPress: () => void;

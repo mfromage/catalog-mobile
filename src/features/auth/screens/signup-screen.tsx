@@ -1,5 +1,5 @@
-import ScreenView from '@/components/screen-view';
 import SignUpFormContainer from '../components/signup-form-container';
+import ScreenView from '@/components/screen-view';
 import { AuthScreenNames, AuthScreenProps } from '@/types/auth-navigator.types';
 
 const SignUpScreen = ({ navigation }: AuthScreenProps) => {

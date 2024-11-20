@@ -1,11 +1,11 @@
 import axios, { AxiosError } from 'axios';
 import { AppConfig } from '@/app/app-config';
 
-import { ErrorResponse } from '@/types/api.types';
 import {
   clearUserCredential,
   getStoredAccessToken,
 } from '@/services/user-service';
+import { ErrorResponse } from '@/types/api.types';
 
 const api = axios.create({
   baseURL: AppConfig.apiBaseUrl,

@@ -1,11 +1,11 @@
-import { View, StyleSheet } from 'react-native';
-import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { SignInFormSchema, SignInRequest } from '../types/auth.types';
-import StyledTextInput from '@/components/styled-text-input';
+import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
+import { View, StyleSheet } from 'react-native';
+import { SignInFormSchema, SignInRequest } from '../types/auth.types';
 import { StyledButton } from '@/components/button/styled-button';
 import StyledText from '@/components/styled-text';
+import StyledTextInput from '@/components/styled-text-input';
 
 type SignInFormProps = {
   onSubmit: (data: SignInRequest) => void;

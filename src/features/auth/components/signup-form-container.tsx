@@ -1,18 +1,17 @@
-import { View, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
+import { View, StyleSheet } from 'react-native';
 import SignUpForm from './signup-form';
 import { StyledButton } from '@/components/button/styled-button';
-import { dimensions } from '@/themes';
 import StyledText from '@/components/styled-text';
-import { SignUpRequest } from '../types/auth.types';
 import GoogleIcon from '@/components/svg/google-icon';
+import { dimensions } from '@/themes';
 
 type SignUpFormContainerProps = {
   onSignInPress: () => void;
 };
 const SignUpFormContainer = ({ onSignInPress }: SignUpFormContainerProps) => {
   const { t } = useTranslation();
-  const handleSubmit = (data: SignUpRequest) => {
+  const handleSubmit = () => {
     //todo: implement SignUp
   };
   return (
