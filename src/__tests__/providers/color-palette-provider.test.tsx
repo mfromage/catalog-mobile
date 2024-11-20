@@ -1,9 +1,9 @@
+import { render, screen, fireEvent } from '@testing-library/react-native';
 import React from 'react';
 import { View } from 'react-native';
-import { render, screen, fireEvent } from '@testing-library/react-native';
-import { ColorPaletteProvider, useColorPalette } from '@/providers/color-palette-provider';
-import StyledText from '@/components/styled-text';
 import { StyledButton } from '@/components/button/styled-button';
+import StyledText from '@/components/styled-text';
+import { ColorPaletteProvider, useColorPalette } from '@/providers/color-palette-provider';
 
 // Test component to access context values
 const TestComponent = () => {

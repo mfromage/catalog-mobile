@@ -1,6 +1,6 @@
 import { postUserSignIn } from '../api/signin-api';
-import api from '@/libs/axios';
 import { SignInRequest } from '../types/auth.types';
+import api from '@/libs/axios';
 
 // Mock the axios instance
 jest.mock('@/libs/axios');
