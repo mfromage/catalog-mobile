@@ -39,6 +39,7 @@ const StyledTextInput = ({
           placeholderTextColor={palette.input.placeholder}
           value={field.value}
           onChangeText={field.onChange}
+          style={styles.input}
         />
       </View>
       {errors[name] && typeof errors[name]?.message === 'string' && (
@@ -58,7 +59,9 @@ const styles = StyleSheet.create({
     padding: dimensions.spacing.md,
     borderRadius: dimensions.borderRadius.md,
   },
-
+  input: {
+    flex: 1,
+  },
   error: {
     marginTop: dimensions.spacing.xs,
   },
