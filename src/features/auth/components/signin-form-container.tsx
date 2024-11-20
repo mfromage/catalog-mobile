@@ -6,6 +6,7 @@ import { dimensions } from '@/themes';
 import StyledText from '@/components/styled-text';
 import { SignInRequest } from '../types/auth.types';
 import GoogleIcon from '@/components/svg/google-icon';
+import useSignIn from '../hooks/use-signin';
 
 type SignInFormContainerProps = {
   onSignUpPress: () => void;
@@ -17,15 +18,20 @@ const SignInFormContainer = ({
   onForgotPasswordPress,
 }: SignInFormContainerProps) => {
   const { t } = useTranslation();
-  const handleSubmit = (data: SignInRequest) => {
-    //todo: implement signin
-  };
+  const { mutate: signIn, error, isPending } = useSignIn();
   return (
     <View style={styles.container}>
       <StyledText variant="h1" style={styles.title}>
         {t('common.welcome')}
       </StyledText>
-      <SignInForm onSubmit={handleSubmit} {...{ onForgotPasswordPress }} />
+      <SignInForm
+        onSubmit={signIn}
+        {...{
+          onForgotPasswordPress,
+          disabled: isPending,
+          errorMessage: error?.message,
+        }}
+      />
       <StyledButton
         left={<GoogleIcon />}
         color="secondary"
