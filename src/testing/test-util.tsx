@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react-native';
+import { render, renderHook } from '@testing-library/react-native';
 import { PropsWithChildren, ReactElement } from 'react';
 import { ColorPaletteProvider } from '@/providers/color-palette-provider';
 import { ColorPalette, lightPalette } from '@/themes';
@@ -39,8 +39,14 @@ const customRender = (ui: ReactElement, options = {}) =>
     ...options,
   });
 
+  const customRenderHook = (callback: (props: any) => any, options = {}) =>
+  renderHook(callback, {
+    wrapper: ({ children }) => <MockProviders>{children}</MockProviders>,
+    ...options,
+  });
+
 // Re-export everything from RTL
 export * from '@testing-library/react-native';
 
 // Override render method to use customRender
-export { customRender as render };
+export { customRender as render, customRenderHook as renderHook };
